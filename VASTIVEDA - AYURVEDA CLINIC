@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ayurveda Clinic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Divine color scheme */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50; /* Holistic feel */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .indication-box {
+            background-color: #FFD700; /* Special indication box */
+            border: 1px solid #FFD700;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Your Ayurveda Clinic</h1>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Ayurvedic Doshas</h2>
+            <!-- Dosha tabulation -->
+            <table>
+                <tr>
+                    <th>Dosha</th>
+                    <th>Description</th>
+                </tr>
+                <!-- Add rows for each Dosha -->
+                <tr>
+                    <td>Vata</td>
+                    <td>Description of Vata Dosha...</td>
+                </tr>
+                <tr>
+                    <td>Pitta</td>
+                    <td>Description of Pitta Dosha...</td>
+                </tr>
+                <tr>
+                    <td>Kapha</td>
+                    <td>Description of Kapha Dosha...</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Similar sections for Guna, Virya, Vipaka, Karma, Ayurvedic Formulations, Treatments -->
+
+        <!-- Special Indication Box -->
+        <div class="indication-box">
+            <h2>Special Indication</h2>
+            <!-- Form for user input -->
+            <form id="indication-form">
+                <label for="roga">Roga:</label>
+                <input type="text" id="roga" name="roga"><br><br>
+                <label for="dosa-prakruthi">Dosa Prakruthi:</label>
+                <input type="text" id="dosa-prakruthi" name="dosa-prakruthi"><br><br>
+                <label for="koshtam">Koshtam:</label>
+                <input type="text" id="koshtam" name="koshtam"><br><br>
+                <label for="agni">Agni:</label>
+                <input type="text" id="agni" name="agni"><br><br>
+                <button type="button" onclick="getTreatment()">Get Treatment</button>
+            </form>
+            <!-- Display result here -->
+            <div id="treatment-result" class="result"></div>
+        </div>
+    </main>
+
+    <script>
+        function getTreatment() {
+            // Get input values
+            var roga = document.getElementById("roga").value;
+            var dosaPrakruthi = document.getElementById("dosa-prakruthi").value;
+            var koshtam = document.getElementById("koshtam").value;
+            var agni = document.getElementById("agni").value;
+
+            // Logic to determine treatment based on input values
+            // Example logic: You can replace this with your actual logic
+            var treatment = "Example treatment for " + roga + ", " + dosaPrakruthi + ", " + koshtam + ", " + agni;
+            
+            // Display result
+            document.getElementById("treatment-result").innerText = treatment;
+        }
+    </script>
+
+</body>
+
+</html>
